@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # Step 2: Runtime stage (Tomcat for serving)
-FROM tomcat:9-jdk17
+FROM tomcat:9-jdk21
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy React build output into Tomcat webapps
